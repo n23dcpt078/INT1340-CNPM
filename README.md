@@ -1,3 +1,3 @@
 **Sinh viên**: Mai Hằng
-**Mục tiêu:** Hoàn thành bài tập LAB01
+**Mục tiêu:** Hoàn thành bài tập LAB
 

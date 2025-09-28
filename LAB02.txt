@@ -1,0 +1,36 @@
+﻿LAB02:
+1. Actors & Use Cases
+* Actors (tác nhân):
+   * Khách hàng
+   * Quản trị viên
+* Use Cases (chức năng):
+   * Đăng ký tài khoản
+   * Đăng nhập
+   * Tìm kiếm sản phẩm
+   * Đặt hàng
+   * Thanh toán
+   * Quản lý sản phẩm (chỉ dành cho quản trị viên)
+
+   2. Use Case Descriptions
+Use Case 1: Đặt hàng
+   * Actor: Khách hàng
+   * Mô tả: Khách chọn sản phẩm và tạo đơn hàng.
+   * Điều kiện tiên quyết: Khách đã đăng nhập.
+   * Luồng sự kiện chính:
+   1. Khách duyệt danh sách sản phẩm.
+   2. Khách chọn sản phẩm và thêm vào giỏ hàng.
+   3. Khách xác nhận đơn hàng.
+   4. Hệ thống lưu thông tin đơn hàng.
+   * Kết quả: Đơn hàng được tạo.
+   * Ngoại lệ: Sản phẩm hết hàng.
+Use Case 2: Thanh toán
+   * Actor: Khách hàng
+   * Mô tả: Khách thanh toán đơn hàng đã đặt.
+   * Điều kiện tiên quyết: Khách đã có đơn hàng.
+   * Luồng sự kiện chính:
+   1. Khách mở giỏ hàng và chọn đơn cần thanh toán.
+   2. Hệ thống hiển thị số tiền.
+   3. Khách chọn phương thức thanh toán (ví dụ: thẻ, COD).
+   4. Hệ thống xác nhận giao dịch.
+   * Kết quả: Đơn hàng được thanh toán.
+   * Ngoại lệ: Giao dịch thất bại.

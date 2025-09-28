@@ -1,0 +1,39 @@
+﻿LAB03:
+1. Use Case Diagram (UC): Rút tiền.
+* Actor: Khách hàng (Customer), Ngân hàng (Bank System).
+* Use case chính: Đăng nhập, Rút tiền, In biên lai.
+* Mối quan hệ:
+   * Khách hàng → Đăng nhập
+   * Khách hàng → Rút tiền
+   * Hệ thống → Xác thực số dư
+   * Hệ thống → Xuất tiền + In biên lai
+2. Use Case Description 
+* UC: Rút tiền
+* Tên UC: Rút tiền
+* Actor: Khách hàng
+* Mục tiêu: Cho phép khách hàng rút tiền từ tài khoản ATM.
+* Điều kiện tiên quyết: Khách hàng đã đăng nhập thành công.
+* Luồng chính:
+   1. Khách hàng chọn chức năng “Rút tiền”.
+   2. Nhập số tiền muốn rút.
+   3. ATM gửi yêu cầu xác minh số dư tới Hệ thống Ngân hàng.
+   4. Nếu đủ tiền → ATM nhả tiền + in biên lai.
+   5. Nếu không đủ tiền → báo lỗi.
+* Kết quả: Tiền mặt được rút ra, tài khoản bị trừ tiền.
+* Sequence Diagram (SQ): Rút tiền, các đối tượng:
+* Customer (Khách hàng)
+* ATM Machine
+* Bank System
+Luồng tương tác:
+1. Customer → ATM: Insert card & enter PIN
+2. ATM → Bank: Verify PIN
+3. Bank → ATM: PIN valid
+4. Customer → ATM: Request withdrawal amount
+5. ATM → Bank: Check balance & deduct
+6. Bank → ATM: Confirm transaction
+7. ATM → Customer: Dispense cash + receipt
+3. Giải thích đối tượng & thông điệp
+* Customer: Người thao tác với ATM.
+* ATM Machine: Thiết bị trung gian xử lý yêu cầu, giao tiếp với khách hàng và hệ thống ngân hàng.
+* Bank System: Hệ thống chính xác thực và xử lý giao dịch.
+* Thông điệp: Các yêu cầu (request) và phản hồi (response) đi theo đúng quy trình nghiệp vụ.

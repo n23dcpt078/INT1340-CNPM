@@ -1,0 +1,30 @@
+@startuml
+title ATM - Package Diagram
+
+package "UI" {
+  [ATM UI]
+}
+
+package "Controller" {
+  [ATMController]
+}
+
+package "BankService" {
+  [BankService]
+  [AccountService]
+}
+
+package "Hardware" {
+  [CardReader]
+  [CashDispenser]
+  [ReceiptPrinter]
+}
+
+' dependencies
+[ATM UI] --> [ATMController]
+[ATMController] --> [BankService]
+[ATMController] --> [CardReader]
+[ATMController] --> [CashDispenser]
+[BankService] ..> [AccountService] : uses
+
+@enduml
